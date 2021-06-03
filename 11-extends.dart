@@ -1,10 +1,14 @@
 void main() {
   
-  final superman = new Heroe();
-  superman.nombre = 'Clark Kent';
+  // ERROR: no puede ser inicializada
+  // final fernando = new Personaje();
+
+  final superman = new Heroe('Clark Kent');
+  final luthor = new Villano('Lex Luthor');
   
-  final luthor = new Villano();
-  luthor.nombre  = 'Lex Luthor';
+
+  print( superman );
+  print( luthor );
   
   
 }
@@ -12,18 +16,29 @@ void main() {
 
 
 abstract class Personaje {
-  String poder;
+  String? poder;
   String nombre;
+
+  Personaje( this.nombre );
+
+  @override
+  String toString() {
+    return '$nombre - $poder';
+  }
 }
 
 
 class Heroe extends Personaje { 
 	
-  int valentia;
+  int? valentia;
+
+  Heroe( String nombre ) : super(nombre);
 
 }
 
 class Villano extends Personaje {
 
-  int maldad;
+  int? maldad;
+
+  Villano( String nombre ) : super(nombre);
 }

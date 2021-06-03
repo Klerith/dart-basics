@@ -19,7 +19,10 @@ class Heroe {
 //     this.poder  = poder; 
 //   }
   
-  Heroe({ this.nombre, this.poder });
+  Heroe({ 
+    required this.nombre, 
+    required this.poder 
+  });
   
   String toString() => 'nombre: $nombre - poder: $poder';
   

@@ -9,7 +9,7 @@ void main() {
   
   
   // Tamaño fijo
-  List masNumeros = List(10);
+  List masNumeros = List.generate(10, (index) => index);
   print( masNumeros );
 //   masNumeros.add(1); Esto no es correcto
   masNumeros[0] = 1;

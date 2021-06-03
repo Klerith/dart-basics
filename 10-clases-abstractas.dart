@@ -11,7 +11,9 @@ void main() {
 
 abstract class Animal {
   
-  int patas;
+  int? patas;
+
+  Animal();
   
   void emitirSonido();
   
@@ -19,8 +21,8 @@ abstract class Animal {
 
 class Perro implements Animal{
   
-  int patas;
-  int colas;
+  int? patas;
+  int? colas;
   
   void emitirSonido() => print('GUAUUUUU!!');
   
@@ -28,7 +30,7 @@ class Perro implements Animal{
 
 class Gato implements Animal {
   
-  int patas;
+  int? patas;
   
   void emitirSonido() => print('MIAUUUU!!');
   

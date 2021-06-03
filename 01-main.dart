@@ -8,7 +8,7 @@ void main() {
   sdasd
   */
   
-  String nombre;
+  String nombre = 'Fernando';
 
   print('Hola $nombre');
   

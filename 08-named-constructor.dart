@@ -17,19 +17,16 @@ void main() {
 
 
 
-
-
 class Heroe {
   
-  String nombre;
-  String poder;
+  String? nombre;
+  String? poder;
   
   Heroe( this.nombre, this.poder );
   
 	Heroe.fromJson( Map parsedJson ) {
     nombre = parsedJson['nombre'];
     poder  = parsedJson['poder'];
-    
   }
   
   

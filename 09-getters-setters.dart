@@ -14,7 +14,7 @@ void main() {
 
 class Cuadrado {
   
-  double _lado;
+  double _lado = 0;
 //   double _area;
   
   
