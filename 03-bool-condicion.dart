@@ -1,16 +1,13 @@
 void main() {
   
   
-  bool activado = true;
-  print(activado);
+  bool? isActive = null;
   
-  
-  if ( !activado ) {
-    print('El motor esta funcionando');
+  if ( isActive == null ) {
+    print( 'isActive es null' );
   } else {
-    print('Está apagado');
+    print( 'No es null' );
   }
-  
   
   
 }
