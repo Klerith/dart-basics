@@ -1,16 +1,20 @@
-void main() {
+
+void main()  {
   
-//   	Números
+  // Strings 
+  final String nombre = 'Tony';
+  final apellido = 'Stark';
+  
+//   nombre = 'Peter';
+  
+  print('$nombre $apellido');
+  
+  
+//   Números
   int empleados = 10;
-  double pi = 3.141592;
-  var numero = 1.0;
+  double salario = 1856.25;
   
-  print( '$empleados - $pi - $numero' );
-  
-//   String - Cadenas de caracteres
-  String nombre = 'Tony';
-  print(nombre);
-  print(nombre[0]);
-  print(nombre[ nombre.length - 1 ]);
+  print( empleados );
+  print( salario );
   
 }
