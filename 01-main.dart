@@ -1,15 +1,15 @@
+
+
 void main() {
   
-  /*
-  print('Hola Mundo');
-  asdasd
-  asd
-  a
-  sdasd
-  */
+  // Este es un comentario
   
-  String nombre = 'Fernando';
-
-  print('Hola $nombre');
+  /*
+   *  Esto es un comentario multilinea
+   *  Hola de nuevo...
+   */
+  
+  
+  print('Hola Mundo');
   
 }
