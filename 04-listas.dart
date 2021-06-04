@@ -1,18 +1,11 @@
 void main() {
   
   
-  List<int> numeros = [1,2,3,4,5];
+  List<int> numeros = [1,2,3,4,5,6,7,8,9,10];
+  numeros.add(11);
   print( numeros );
   
-  numeros.add(6);
-  print( numeros );
-  
-  
-  // Tamaño fijo
-  List masNumeros = List.generate(10, (index) => index);
-  print( masNumeros );
-//   masNumeros.add(1); Esto no es correcto
-  masNumeros[0] = 1;
-  print( masNumeros );
-  
+  final masNumeros = List.generate(100, (int index) => index );
+ 
+  print(masNumeros);
 }
