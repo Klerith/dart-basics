@@ -1,31 +1,21 @@
-
 void main() {
   
-  String propiedad = 'soltero';
-  
+//   Map persona = {
+//     'nombre': 'Fernando',
+//     'edad': 35,
+//     'soltero': false,
+//     true: false,
+//     1: 100,
+//     2: 500
+//   };
   
   Map<String, dynamic> persona = {
-    'nombre' : 'Carlos',
-    'edad'   : 32,
-    'soltero': true
+    'nombre': 'Fernando',
+    'edad': 35,
+    'soltero': false,
   };
   
-  print( persona['nombre'] );
-  print( persona['edad'] );
-  print( persona[ propiedad ] );
+  persona.addAll({ 'segundoNombre': 'Juan' });
   
-  
-  Map<int, String> personas = {
-    1: 'Tony',
-    2: 'Peter',
-    9: 'Strange'
-  };
-  
-  personas.addAll( { 4: 'Banner'  } );
-  
-  print( personas );
-  print( personas[2] );
-  
-  
+  print( persona );
 }
-
