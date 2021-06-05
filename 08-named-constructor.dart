@@ -1,35 +1,39 @@
-import 'dart:convert';
-
-void main() {
+void main(){
   
-//   final wolverine = new Heroe('Logan', 'Regeneración');
-  final rawJson    = '{ "nombre": "Logan", "poder":"Regeneración" }';
-  Map parsedJson = json.decode( rawJson );
+  final rawJson = {
+    'nombre': 'Tony Stark',
+    'poder': 'Dinero'
+  };
   
-//   print( parsedJson );
+//   final ironman = new Heroe( nombre: rawJson['nombre']!, poder: rawJson['poder']! );
   
-  final wolverine = new Heroe.fromJson( parsedJson );
+   final ironman = Heroe.fromJson( rawJson );
   
-  print(wolverine.nombre);
-  print(wolverine.poder);
+  print(ironman);
+  
+//   final wolverine = new Heroe(nombre:'Logan', poder: 'Regeneración');
+//   print( wolverine );
   
 }
-
 
 
 class Heroe {
   
-  String? nombre;
-  String? poder;
+  String nombre;
+  String poder;
   
-  Heroe( this.nombre, this.poder );
+  Heroe({ 
+    required this.nombre, 
+    required this.poder 
+  });
   
-	Heroe.fromJson( Map parsedJson ) {
-    nombre = parsedJson['nombre'];
-    poder  = parsedJson['poder'];
+  Heroe.fromJson( Map<String, String> json  ):
+    this.nombre = json['nombre']!,
+    this.poder  = json['poder'] ?? 'No tiene poder';
+  
+  
+  
+  String toString() {
+    return 'Heroe: nombre: ${this.nombre}, poder: ${ this.poder }';
   }
-  
-  
 }
-
-
