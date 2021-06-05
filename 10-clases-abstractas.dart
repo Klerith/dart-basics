@@ -1,40 +1,45 @@
 void main() {
   
   final perro = new Perro();
-  perro.emitirSonido();
-  
   final gato = new Gato();
-  gato.emitirSonido();
+ 
   
+  sonidoAnimal( perro );
+  sonidoAnimal( gato );
+  
+}
+
+void sonidoAnimal( Animal animal ) {
+  animal.emitirSonido();
 }
 
 
 abstract class Animal {
   
   int? patas;
-
-  Animal();
-  
   void emitirSonido();
   
 }
 
-class Perro implements Animal{
+class Perro implements Animal {
   
   int? patas;
-  int? colas;
   
-  void emitirSonido() => print('GUAUUUUU!!');
+  void emitirSonido() => print('Guauuuuuuuu');
   
 }
 
 class Gato implements Animal {
   
   int? patas;
+  int? cola;
   
-  void emitirSonido() => print('MIAUUUU!!');
-  
+  void emitirSonido() => print('Miauuuuuuuu');
 }
+
+
+
+
 
 
 
